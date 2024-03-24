@@ -39,7 +39,7 @@ AMOUNT_ORDER_PRE:  Total number of items of previous orders, if available\
 VALUE_ORDER_PRE:    Total value of previous orders, if available\
 DATE_LORDER:  Date of the last order, if available\
 MAHN_AKT:             Current stage of reminder of the customer, if available\
-MAHN_HOECHST:  Highest stage of reminder of the customer occurred up to now, if available\
+MAHN_HOECHST:  Highest stage of reminder of the customer occurred up to now, if available
 
 ## Data cleaning and preprocessing
 **Data cleaning:** 
