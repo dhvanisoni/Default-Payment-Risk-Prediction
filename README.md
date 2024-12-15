@@ -3,44 +3,6 @@
 The given dataset has 30,000 online purchase orders for an online trader. Each example in the data set corresponds to an online purchase order and is characterized by 44 attributes. The second attribute is the target (i.e., class) attribute that indicates whether an order has a high risk of default payment. The class attribute has two values, "yes" meaning high risk and "no" meaning low risk. 
 The task is to help the online trader recognize if a person who makes an order is a customer who will eventually pay for the goods using machine learning techniques. Use a classification algorithm to build a prediction model based on the training data. This prediction model shall then classify incoming orders into the high-risk or low-risk class. The incoming orders are stored in a test data set containing 20,000 orders with an unknown risk of default payment (that is, the target attribute is missing in the test data set). 
 
-## Data Description
-Dataset Description:
-ORDER_ID:  ID number of the online order\
-CLASS:  Class attribute of the task (yes/no)\
-B_EMAIL: was an email address submitted together with the order (yes/no)\
-B_TELEFON: was a phone number submitted together with the order (yes/no)\
-B_BIRTHDATE: Birth date, if submitted together with the order\
-FLAG_LRIDENTISCH:  if address of delivery and invoice are identical then "yes" else "no"\
-FLAG_NEWSLETTER:  was the E-Newsletter subscribed to together with the order (yes/no)\
-Z_METHODE:  Selected method of payment\
-Z_CARD_ART:  Selected type of card if payment by card is chosen\
-Z_CARD_VALID:  Expiration date of the card in the form month.year\
-Z_LAST_NAME:  is the name of the account or card holder identical with the name of the delivery address (yes/no)\
-VALUE_ORDER:   Value of the order in Euro\
-WEEKDAY_ORDER:  Weekday of the order\
-TIME_ORDER:   Time of the order\
-AMOUNT_ORDER:  Number of ordered items\
-ANUMBER_01 to ANUMBER_10 : Data field for the number of an ordered item (10 columns)\
-CHK_LADR:  Orders with the same delivery address within 3 days (yes/no)\
-CHK_RADR: Orders with the same invoice address within 3 days (yes/no)\
-CHK_K:  Orders with the same account number within 3 days (yes/no)\
-CHK_CARD: Orders with the same card number within 3 days (yes/no)\
-CHK_COOKIE:  Orders with the same browser cookie within 3 days (yes/no)\
-CHK_IP:  Orders with the same browser IP within 3 days (yes/no)\
-FAIL_LPLZ:  Zip code of the delivery address unknown (yes/no)\
-FAIL_LORT: City of the delivery address unknown (yes/no)\
-FAIL_LPLZORTMATCH:  Zip code and city of the delivery address do not fit together (yes/no)\
-FAIL_RPLZ:  Zip code of the invoice address unknown (yes/no)\
-FAIL_RORT:  City of the invoice address unknown (yes/no)\
-FAIL_RPLZORTMATCH:     Zip code and city of the invoice address do not fit together (yes/no)\
-SESSION_TIME:  Duration of the online session for the order in minutes\
-NEUKUNDE:  is the ordering person a new customer (yes/no)\
-AMOUNT_ORDER_PRE:  Total number of items of previous orders, if available\
-VALUE_ORDER_PRE:    Total value of previous orders, if available\
-DATE_LORDER:  Date of the last order, if available\
-MAHN_AKT:             Current stage of reminder of the customer, if available\
-MAHN_HOECHST:  Highest stage of reminder of the customer occurred up to now, if available
-
 ## Data cleaning and preprocessing
 **Data cleaning:** 
 The columns that have more than 50% of missing values has been removed from dataset. We see many null values in 'Z_CARD_ART' columns because payment is done by check. Customers use three types of credit card: Visa, Eurocard, Amex. The null values in those rows where method type is check are fill using check and null values in those rows where method type is debit are fill using most common Eurocard. Null values in Last name column are fill by mode.
